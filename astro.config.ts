@@ -12,7 +12,6 @@ import { rehypeAutolink } from './plugins/rehype-autolink';
 import { rehypeTasklistEnhancer } from './plugins/rehype-tasklist-enhancer';
 import { remarkFallbackLang } from './plugins/remark-fallback-lang';
 
-
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://docs.staticsnap.com',
@@ -21,9 +20,7 @@ export default defineConfig({
 			title: 'Docs',
 			customCss: ['./src/styles/custom.css'],
 			expressiveCode: {
-				plugins: [
-					pluginCollapsibleSections(),
-				],
+				plugins: [pluginCollapsibleSections()],
 			},
 			components: {
 				EditLink: './src/components/starlight/EditLink.astro',
