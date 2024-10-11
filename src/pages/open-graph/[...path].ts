@@ -58,7 +58,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
 						'Noto Sans KR',
 					],
 					weight: 'Medium',
-					color: [255, 255, 255],
+					color: [0, 0, 0],
 				},
 				description: {
 					size: 42,
@@ -73,7 +73,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
 						'Noto Sans KR',
 					],
 					weight: 'Normal',
-					color: [191, 193, 201],
+					color: [33, 43, 54],
 				},
 			},
 			fonts: [
