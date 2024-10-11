@@ -12,20 +12,18 @@ import { rehypeAutolink } from './plugins/rehype-autolink';
 import { rehypeTasklistEnhancer } from './plugins/rehype-tasklist-enhancer';
 import { remarkFallbackLang } from './plugins/remark-fallback-lang';
 
-/* https://docs.netlify.com/configure-builds/environment-variables/#read-only-variables */
-const NETLIFY_PREVIEW_SITE = process.env.CONTEXT !== 'production' && process.env.DEPLOY_PRIME_URL;
-
-const site = NETLIFY_PREVIEW_SITE || 'https://docs.astro.build/';
 
 // https://astro.build/config
 export default defineConfig({
-	site,
+	site: 'https://docs.staticsnap.com',
 	integrations: [
 		starlight({
 			title: 'Docs',
 			customCss: ['./src/styles/custom.css'],
 			expressiveCode: {
-				plugins: [pluginCollapsibleSections()],
+				plugins: [
+					pluginCollapsibleSections(),
+				],
 			},
 			components: {
 				EditLink: './src/components/starlight/EditLink.astro',
@@ -38,7 +36,7 @@ export default defineConfig({
 				Pagination: './src/components/starlight/Pagination.astro',
 				Footer: './src/components/starlight/Footer.astro',
 				SiteTitle: './src/components/starlight/SiteTitle.astro',
-				Search: './src/components/starlight/Search.astro',
+				//Search: './src/components/starlight/Search.astro',
 				Sidebar: './src/components/starlight/Sidebar.astro',
 				MobileMenuFooter: './src/components/starlight/MobileMenuFooter.astro',
 				PageTitle: './src/components/starlight/PageTitle.astro',
@@ -53,7 +51,7 @@ export default defineConfig({
 				github: 'https://github.com/static-snap/static-snap',
 				//discord: 'https://staticsnap.com/chat',
 			},
-			pagefind: false,
+			pagefind: true,
 			head: [
 				// Add ICO favicon fallback for Safari.
 				{
