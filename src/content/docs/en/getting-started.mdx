@@ -1,0 +1,55 @@
+---
+title: Getting Started
+description: A basic intro to Astro.
+i18nReady: true
+tableOfContents: false
+editUrl: false
+next: false
+hero:
+  title: Static Snap Docs
+  tagline: Guides, resources, and API references to help you start with Static Snap.
+  actions:
+    - text: Install Static Snap
+      icon: rocket
+      link: /en/install-and-setup/
+    - text: Learn about Static Snap’s features
+      icon: right-arrow
+      variant: minimal
+      link: /en/concepts/why-astro/
+  facepile:
+    tagline: Powered by Astro and our open-source contributors.
+    linkText: Join us!
+    link: /en/contribute/
+banner:
+  content: Public beta version available. <a href="https://staticsnap.com/download"> Download v0.1.0</a>!
+---
+
+import { CardGrid } from '@astrojs/starlight/components'
+import Button from '~/components/Button.astro'
+import Card from '~/components/Landing/Card.astro'
+import ListCard from '~/components/Landing/ListCard.astro'
+import SplitCard from '~/components/Landing/SplitCard.astro'
+import SupportEmail from '~/components/Landing/SupportEmail.astro'
+
+<CardGrid>
+
+
+  <SplitCard title="Quick Demo" icon="rocket">
+    <Button variant="minimal" link={"https://app.instawp.io/launch?t=static-snap&d=v2"} set:html={"Launch Quick Demo in InstaWP"} />
+   
+    
+    Our [installation guide](/en/install-and-setup/) has step-by-step instructions for installing Static Snap.
+  </SplitCard>
+
+  <ListCard title="Learn" icon="open-book">
+    - [Static Snap's main features](/en/concepts/why-static-snap/)
+    - [Extensions](/en/concepts/extensions/)
+  </ListCard>
+
+  <ListCard title="Developers" icon="puzzle">
+    - [Add extensions](/en/developers/create-extension-guide/)
+  </ListCard>
+</CardGrid>
+
+<SupportEmail title="Have a question or want to get involved?" cta="Send us an email" />
+```
