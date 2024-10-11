@@ -20,7 +20,7 @@ body:
     attributes:
       label: "📋 Page(s) affected (or suggested, for new content)"
       description: Please provide the URL of the page(s) affected.
-      placeholder: https://docs.astro.build/en/getting-started/
+      placeholder: https://docs.staticsnap.com/en/getting-started/
     validations:
         required: true
   - type: textarea
@@ -31,11 +31,3 @@ body:
       placeholder: "..."
     validations:
         required: true
-  - type: textarea
-    id: incorrectContent
-    attributes:
-      label: "🖥️ Reproduction in StackBlitz (if reporting incorrect content or code samples)"
-      description: If you are reporting incorrect content or code samples, you can also attach a reproduction in stackblitz. See https://astro.new for starter projects.
-      placeholder: "..."
-    validations:
-        required: false
