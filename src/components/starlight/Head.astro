@@ -8,11 +8,22 @@ const { isFallback, lang } = Astro.props;
 const ogImageUrl = getOgImageUrl(Astro.url.pathname, !!isFallback);
 const imageSrc = ogImageUrl ?? '/default-og-image.png';
 const canonicalImageSrc = new URL(imageSrc, Astro.site);
-
+const is404 = Astro.url.pathname.endsWith('/404/');
+const currentDomain = new URL(Astro.request.url).origin;
+const isProduction = currentDomain === 'https://docs.staticsnap.com';
 ---
 
 <Default {...Astro.props}><slot /></Default>
 <meta property="og:image" content={canonicalImageSrc} />
 <meta name="twitter:image" content={canonicalImageSrc} />
 
-
+{
+	isProduction && (
+		<script
+			defer
+			src="https://cloud.umami.is/script.js"
+			data-website-id="0cb74b89-7502-49df-a975-00398d70dbe5"
+			data-canonical={is404 ? 'false' : 'true'}
+		/>
+	)
+}
