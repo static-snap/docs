@@ -10,6 +10,7 @@ Static Snap provides a set of filters that allow developers to customize and ext
 
 - **`Filters::API_URL`**
   - **Description**: Defines the API URL used in the plugin.
+  - **Filter String**: `static_snap_api_url`
   - **Example Usage**:
     ```php
     add_filter( Filters::API_URL, array( $this, 'api_url' ) );
@@ -17,6 +18,7 @@ Static Snap provides a set of filters that allow developers to customize and ext
 
 - **`Filters::WEBSITE_URL`**
   - **Description**: Defines the website URL used in the plugin.
+  - **Filter String**: `static_snap_website_url`
   - **Example Usage**:
     ```php
     add_filter( Filters::WEBSITE_URL, array( $this, 'website_url' ) );
@@ -26,11 +28,13 @@ Static Snap provides a set of filters that allow developers to customize and ext
 
 - **`Filters::DEPLOYMENT_TASKS`**
   - **Description**: Defines the deployment tasks used in the plugin.
+  - **Filter String**: `static_snap_deployment_tasks`
 
 ### Post Type Filters
 
 - **`Filters::POST_TYPES`**
   - **Description**: Defines the post types used in the plugin. Allows adding or removing post types.
+  - **Filter String**: `static_snap_post_types`
   - **Example Usage**:
     ```php
     add_filter( Filters::POST_TYPES, array( $this, 'post_types' ) );
@@ -38,63 +42,79 @@ Static Snap provides a set of filters that allow developers to customize and ext
 
 - **`Filters::ARCHIVE_POST_TYPES`**
   - **Description**: Defines the archive post types used in the plugin.
+  - **Filter String**: `static_snap_archive_post_types`
 
 ### URL Modification Filters
 
 - **`Filters::BEFORE_SAVE_POST_URLS`**
   - **Description**: Modifies post URLs before saving them to the database.
+  - **Filter String**: `static_snap_before_save_post_urls`
 
 - **`Filters::BEFORE_SAVE_POST_ARCHIVES_URLS`**
   - **Description**: Modifies post archive URLs before saving them to the database.
+  - **Filter String**: `static_snap_before_save_post_archives_urls`
 
 - **`Filters::BEFORE_SAVE_AUTHORS_URLS`**
   - **Description**: Modifies author URLs before saving them to the database.
+  - **Filter String**: `static_snap_before_save_authors_urls`
 
 - **`Filters::BEFORE_SAVE_TERM_URLS`**
   - **Description**: Modifies term URLs before saving them to the database.
+  - **Filter String**: `static_snap_before_save_term_urls`
 
 ### Ignored Items Filters
 
 - **`Filters::IGNORED_PATTERNS`**
   - **Description**: Defines the ignored patterns used in the plugin.
+  - **Filter String**: `static_snap_ignored_patterns`
 
 - **`Filters::IGNORED_FILES`**
   - **Description**: Defines the ignored files used in the plugin.
+  - **Filter String**: `static_snap_ignored_files`
 
 - **`Filters::IGNORED_EXTENSIONS`**
   - **Description**: Defines the ignored extensions used in the plugin.
+  - **Filter String**: `static_snap_ignored_extensions`
 
 ### Extension Filters
 
 - **`Filters::POSSIBLE_EXTENSIONS_WITH_URLS`**
   - **Description**: Defines possible extensions with URLs used in the plugin.
+  - **Filter String**: `static_snap_possible_extensions_with_urls`
 
 ### Build Directory Filters
 
 - **`Filters::BUILD_DIRECTORY_PATH`**
   - **Description**: Defines the build directory path where build files are stored.
+  - **Filter String**: `static_snap_build_directory_path`
 
 ### Post URL Filters
 
 - **`Filters::POST_URL`**
   - **Description**: Defines the post URL used in the plugin.
+  - **Filter String**: `static_snap_post_url`
 
 - **`Filters::URL_LOCAL_DESTINATION`**
   - **Description**: Defines the local destination URL for the post.
+  - **Filter String**: `static_snap_post_url_local_destination`
 
 - **`Filters::POST_URL_CONTENT`**
   - **Description**: Defines the post URL content used in the plugin.
+  - **Filter String**: `static_snap_post_url_content`
 
 - **`Filters::POST_URL_REMOTE_PERMALINK`**
   - **Description**: Defines the remote permalink for the post URL.
+  - **Filter String**: `static_snap_post_url_remote_permalink`
 
 - **`Filters::POST_URL_REMOTE_ARGS`**
   - **Description**: Defines the remote arguments used in the plugin.
+  - **Filter String**: `static_snap_post_url_remote_args`
 
 ### Search Filters
 
 - **`Filters::SEARCH_POST_TO_INDEX`**
   - **Description**: Modifies the post index before saving it to the database.
+  - **Filter String**: `static_snap_search_post_to_index`
   - **Example**:
     ```php
     /**
@@ -105,30 +125,37 @@ Static Snap provides a set of filters that allow developers to customize and ext
 
 - **`Filters::SEARCH_CONTENT_TAGS_REMOVE`**
   - **Description**: Modifies tags that will be deleted from the content.
+  - **Filter String**: `static_snap_search_content_tags_remove`
 
 - **`Filters::SEARCH_CONTENT_SHORTCODES_REMOVE`**
   - **Description**: Modifies shortcodes that will be deleted from the content.
+  - **Filter String**: `static_snap_search_content_shortcodes_remove`
 
 - **`Filters::ALGOLIA_SEARCH_SETTINGS`**
   - **Description**: Defines settings for Algolia search.
+  - **Filter String**: `static_snap_algolia_search_settings`
 
 ### Frontend Filters
 
 - **`Filters::FRONTEND_HAS_TRANSLATIONS`**
   - **Description**: Defines whether the site has translations.
+  - **Filter String**: `static_snap_frontend_has_translations`
 
 - **`Filters::FRONTEND_LOCALIZE_DATA`**
   - **Description**: Defines the localized data used in the frontend.
+  - **Filter String**: `static_snap_frontend_localize_data`
 
 ### FUSE Filters
 
 - **`Filters::FUSE_DYNAMIC_SEARCH_INDEX_URL`**
   - **Description**: Defines the dynamic search index URL used to get the search index in WordPress.
+  - **Filter String**: `static_snap_fuse_dynamic_search_index_url`
 
 ### WordPress Installation Filters
 
 - **`Filters::WP_INSTALLATION_MD5`**
   - **Description**: Defines the WordPress installation MD5 for unique site identification.
+  - **Filter String**: `static_snap_wp_installation_md5`
   - **Example Usage**:
     ```php
     add_filter( Filters::WP_INSTALLATION_MD5, array( $this, 'wp_installation_md5' ) );
@@ -139,11 +166,12 @@ Static Snap provides a set of filters that allow developers to customize and ext
 
 - **`Filters::SAVE_OPTIONS`**
   - **Description**: Defines options for saving.
+  - **Filter String**: `static_snap_save_options`
 
 - **`Filters::SET_OPTIONS`**
   - **Description**: Modifies the value of an option.
+  - **Filter String**: `static_snap_set_options`
   - **Example Usage**:
     ```php
     add_filter( Filters::SET_OPTIONS . '_my_option', array( $this, 'update_my_option' ), 10, 2 );
     ```
-
