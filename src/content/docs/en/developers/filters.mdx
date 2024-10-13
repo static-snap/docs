@@ -1,0 +1,149 @@
+---
+title: Filters
+description: 'A comprehensive guide to the filters available in Static Snap for developers.'
+i18nReady: true
+---
+
+Static Snap provides a set of filters that allow developers to customize and extend the functionality of the plugin. These filters offer a single point of reference, reducing the need for hard-coded strings and making it easier to modify filter behaviors. Below is a list of available filters and their descriptions.
+
+### API Filters
+
+- **`Filters::API_URL`**
+  - **Description**: Defines the API URL used in the plugin.
+  - **Example Usage**:
+    ```php
+    add_filter( Filters::API_URL, array( $this, 'api_url' ) );
+    ```
+
+- **`Filters::WEBSITE_URL`**
+  - **Description**: Defines the website URL used in the plugin.
+  - **Example Usage**:
+    ```php
+    add_filter( Filters::WEBSITE_URL, array( $this, 'website_url' ) );
+    ```
+
+### Deployment Filters
+
+- **`Filters::DEPLOYMENT_TASKS`**
+  - **Description**: Defines the deployment tasks used in the plugin.
+
+### Post Type Filters
+
+- **`Filters::POST_TYPES`**
+  - **Description**: Defines the post types used in the plugin. Allows adding or removing post types.
+  - **Example Usage**:
+    ```php
+    add_filter( Filters::POST_TYPES, array( $this, 'post_types' ) );
+    ```
+
+- **`Filters::ARCHIVE_POST_TYPES`**
+  - **Description**: Defines the archive post types used in the plugin.
+
+### URL Modification Filters
+
+- **`Filters::BEFORE_SAVE_POST_URLS`**
+  - **Description**: Modifies post URLs before saving them to the database.
+
+- **`Filters::BEFORE_SAVE_POST_ARCHIVES_URLS`**
+  - **Description**: Modifies post archive URLs before saving them to the database.
+
+- **`Filters::BEFORE_SAVE_AUTHORS_URLS`**
+  - **Description**: Modifies author URLs before saving them to the database.
+
+- **`Filters::BEFORE_SAVE_TERM_URLS`**
+  - **Description**: Modifies term URLs before saving them to the database.
+
+### Ignored Items Filters
+
+- **`Filters::IGNORED_PATTERNS`**
+  - **Description**: Defines the ignored patterns used in the plugin.
+
+- **`Filters::IGNORED_FILES`**
+  - **Description**: Defines the ignored files used in the plugin.
+
+- **`Filters::IGNORED_EXTENSIONS`**
+  - **Description**: Defines the ignored extensions used in the plugin.
+
+### Extension Filters
+
+- **`Filters::POSSIBLE_EXTENSIONS_WITH_URLS`**
+  - **Description**: Defines possible extensions with URLs used in the plugin.
+
+### Build Directory Filters
+
+- **`Filters::BUILD_DIRECTORY_PATH`**
+  - **Description**: Defines the build directory path where build files are stored.
+
+### Post URL Filters
+
+- **`Filters::POST_URL`**
+  - **Description**: Defines the post URL used in the plugin.
+
+- **`Filters::URL_LOCAL_DESTINATION`**
+  - **Description**: Defines the local destination URL for the post.
+
+- **`Filters::POST_URL_CONTENT`**
+  - **Description**: Defines the post URL content used in the plugin.
+
+- **`Filters::POST_URL_REMOTE_PERMALINK`**
+  - **Description**: Defines the remote permalink for the post URL.
+
+- **`Filters::POST_URL_REMOTE_ARGS`**
+  - **Description**: Defines the remote arguments used in the plugin.
+
+### Search Filters
+
+- **`Filters::SEARCH_POST_TO_INDEX`**
+  - **Description**: Modifies the post index before saving it to the database.
+  - **Example**:
+    ```php
+    /**
+     * @param mixed $index
+     * @param \WP_Post $post
+     */
+    ```
+
+- **`Filters::SEARCH_CONTENT_TAGS_REMOVE`**
+  - **Description**: Modifies tags that will be deleted from the content.
+
+- **`Filters::SEARCH_CONTENT_SHORTCODES_REMOVE`**
+  - **Description**: Modifies shortcodes that will be deleted from the content.
+
+- **`Filters::ALGOLIA_SEARCH_SETTINGS`**
+  - **Description**: Defines settings for Algolia search.
+
+### Frontend Filters
+
+- **`Filters::FRONTEND_HAS_TRANSLATIONS`**
+  - **Description**: Defines whether the site has translations.
+
+- **`Filters::FRONTEND_LOCALIZE_DATA`**
+  - **Description**: Defines the localized data used in the frontend.
+
+### FUSE Filters
+
+- **`Filters::FUSE_DYNAMIC_SEARCH_INDEX_URL`**
+  - **Description**: Defines the dynamic search index URL used to get the search index in WordPress.
+
+### WordPress Installation Filters
+
+- **`Filters::WP_INSTALLATION_MD5`**
+  - **Description**: Defines the WordPress installation MD5 for unique site identification.
+  - **Example Usage**:
+    ```php
+    add_filter( Filters::WP_INSTALLATION_MD5, array( $this, 'wp_installation_md5' ) );
+    ```
+  - **Note**: If the database name or other settings change, the site will be identified as new, requiring a reconnection to the app before deploying.
+
+### Save Options Filters
+
+- **`Filters::SAVE_OPTIONS`**
+  - **Description**: Defines options for saving.
+
+- **`Filters::SET_OPTIONS`**
+  - **Description**: Modifies the value of an option.
+  - **Example Usage**:
+    ```php
+    add_filter( Filters::SET_OPTIONS . '_my_option', array( $this, 'update_my_option' ), 10, 2 );
+    ```
+

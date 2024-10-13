@@ -1,0 +1,31 @@
+---
+title: Environments
+description: 'Learn about what an environment is in Static Snap'
+i18nReady: true
+---
+
+import { Image } from 'astro:assets';
+
+
+## What Are Environments?
+
+Environments are configurations that dictate how Static Snap builds and deploys your site. Each environment can have distinct settings, including the build command, output directory, and deployment parameters. By using environments, you can tailor configurations for various stages of your development workflow, such as development, staging, and production.
+
+
+## Why use Environments?
+
+Utilizing environments enables you to manage different configurations for each stage of your development process. By defining separate environments, you can ensure that your site is built and deployed correctly at each stage. For instance, you can establish a development environment targeting a ZIP file, while a production environment can be set to deploy to the main branch on GitHub. This practice allows you to test your site locally before deploying it to a remote server.
+
+## How to Use Environments
+
+To create and edit environments, go to the Environments section in the left sidebar of the admin panel. Here, you can:
+
+- **Create new environments**
+- **Edit existing environments**
+- **Define settings for each environment**
+
+Each environment can specify its own output directory and deployment settings, allowing you to customize the build and deployment process for each development stage.
+
+Once you have defined your environments, you can deploy them directly from the top menu in the WordPress admin header.
+
+<Image src="/src/assets/screenshots/environments/environments-list.png" alt="Environments List" width={600} height={400} />

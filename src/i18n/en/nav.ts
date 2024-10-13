@@ -25,10 +25,17 @@ export default [
 	{ text: 'Core Concepts', header: true, type: 'learn', key: 'coreConcepts' },
 	{ text: 'Why Static Snap?', slug: 'concepts/why-static-snap', key: 'concepts/why-static-snap' },
 	{ text: 'Extensions', slug: 'concepts/extensions', key: 'concepts/extensions' },
+	{ text: 'Environments', slug: 'concepts/environments', key: 'concepts/environments' },
 
 	{ text: 'Developers', header: true, type: 'learn', key: 'developers' },
 	{ text: 'Contribute', slug: 'developers/contribute', key: 'developers/contribute' },
-	{ text: 'Create extension', slug: 'developers/create-extension-guide', key: 'developers/create-extension-guide' },
+	{
+		text: 'Create extension',
+		slug: 'developers/create-extension-guide',
+		key: 'developers/create-extension-guide',
+	},
+	{ text: 'Actions', slug: 'developers/actions', key: 'developers/actions' },
+	{ text: 'Filters', slug: 'developers/filters', key: 'developers/filters' },
 ] satisfies NavEntry[];
 
 type NavEntry = {

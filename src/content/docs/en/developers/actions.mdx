@@ -1,0 +1,126 @@
+---
+title: Actions
+description: 'A comprehensive guide to the actions available in Static Snap for developers.'
+i18nReady: true
+---
+
+Static Snap provides a set of actions that allow developers to customize and extend the functionality of the plugin. These actions serve as a single point of reference, reducing the need for hard-coded strings and making it easier to modify action behaviors. Below is a list of available actions and their descriptions.
+
+### Core Actions
+
+- **`Actions::INIT`**
+  - **Description**: Init action for the plugin.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::INIT );
+    ```
+
+- **`Actions::ADMIN_REMOVE_CONFLICTING_STYLES`**
+  - **Description**: Action to remove conflicting styles in the admin area. This is useful because some plugins add styles that may conflict with the plugin styles (e.g., WPML plugin).
+  - **Example Usage**:
+    ```php
+    add_action( Actions::ADMIN_REMOVE_CONFLICTING_STYLES, array( $this, 'remove_conflicting_styles' ) );
+    ```
+
+### Post URL Actions
+
+- **`Actions::BEFORE_CREATE_POST_URL`**
+  - **Description**: This action is fired before creating a post URL object.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::BEFORE_CREATE_POST_URL, $post );
+    ```
+
+- **`Actions::AFTER_CREATE_POST_URL`**
+  - **Description**: This action is fired after creating a post URL object.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::AFTER_CREATE_POST_URL, $post_url );
+    ```
+
+### Term URL Actions
+
+- **`Actions::BEFORE_CREATE_TERM_URL`**
+  - **Description**: This action is fired before creating a term URL object.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::BEFORE_CREATE_TERM_URL, $term );
+    ```
+
+- **`Actions::AFTER_CREATE_TERM_URL`**
+  - **Description**: This action is fired after creating a term URL object.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::AFTER_CREATE_TERM_URL, $term_url );
+    ```
+
+### Fetch Actions
+
+- **`Actions::BEFORE_FETCH_POST_URL`**
+  - **Description**: Action that is triggered before fetching a post URL.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::BEFORE_FETCH_POST_URL, $post_id );
+    ```
+
+- **`Actions::AFTER_FETCH_POST_URL`**
+  - **Description**: Action that is triggered after fetching a post URL.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::AFTER_FETCH_POST_URL, $post_url );
+    ```
+
+### Deployment Actions
+
+- **`Actions::DEPLOYMENT_PROCESS_INIT_EXTENSIONS`**
+  - **Description**: Action used to initialize integrations in the deployment process.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::DEPLOYMENT_PROCESS_INIT_EXTENSIONS );
+    ```
+
+- **`Actions::DEPLOYMENT_BEFORE_PERFORM_TASK`**
+  - **Description**: Action that is triggered before performing a task in the deployment process.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::DEPLOYMENT_BEFORE_PERFORM_TASK, $task );
+    ```
+
+- **`Actions::DEPLOYMENT_AFTER_PERFORM_TASK`**
+  - **Description**: Action that is triggered after performing a task in the deployment process.
+  - **Example Usage**:
+    ```php
+    do_action( Actions::DEPLOYMENT_AFTER_PERFORM_TASK, $task_result );
+    ```
+
+### Registration Actions
+
+- **`Actions::REGISTER_ENVIRONMENT_EXTENSIONS`**
+  - **Description**: Action used to define the environment types used in the plugin.
+  - **Example Usage**:
+    ```php
+    add_action( Actions::REGISTER_ENVIRONMENT_EXTENSIONS, array( $this, 'register_environment_types' ) );
+    ```
+
+- **`Actions::REGISTER_SEARCH_EXTENSIONS`**
+  - **Description**: Action used to define the search types used in the plugin.
+  - **Example Usage**:
+    ```php
+    add_action( Actions::REGISTER_SEARCH_EXTENSIONS, array( $this, 'register_search_types' ) );
+    ```
+
+- **`Actions::REGISTER_FORM_EXTENSIONS`**
+  - **Description**: Action used to define the form types used in the plugin.
+  - **Example Usage**:
+    ```php
+    add_action( Actions::REGISTER_FORM_EXTENSIONS, array( $this, 'register_form_types' ) );
+    ```
+
+### Head Actions
+
+- **`Actions::REMOVE_HEAD_LINKS`**
+  - **Description**: Action to remove head links.
+  - **Example Usage**:
+    ```php
+    add_action( Actions::REMOVE_HEAD_LINKS, array( $this, 'remove_head_links' ) );
+    ```
