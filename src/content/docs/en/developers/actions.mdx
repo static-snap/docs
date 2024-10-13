@@ -10,6 +10,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::INIT`**
   - **Description**: Init action for the plugin.
+  - **Action String**: `static_snap_init`
   - **Example Usage**:
     ```php
     do_action( Actions::INIT );
@@ -17,6 +18,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::ADMIN_REMOVE_CONFLICTING_STYLES`**
   - **Description**: Action to remove conflicting styles in the admin area. This is useful because some plugins add styles that may conflict with the plugin styles (e.g., WPML plugin).
+  - **Action String**: `static_snap_admin_remove_conflicting_styles`
   - **Example Usage**:
     ```php
     add_action( Actions::ADMIN_REMOVE_CONFLICTING_STYLES, array( $this, 'remove_conflicting_styles' ) );
@@ -26,6 +28,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::BEFORE_CREATE_POST_URL`**
   - **Description**: This action is fired before creating a post URL object.
+  - **Action String**: `static_snap_before_create_post_url`
   - **Example Usage**:
     ```php
     do_action( Actions::BEFORE_CREATE_POST_URL, $post );
@@ -33,6 +36,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::AFTER_CREATE_POST_URL`**
   - **Description**: This action is fired after creating a post URL object.
+  - **Action String**: `static_snap_after_create_post_url`
   - **Example Usage**:
     ```php
     do_action( Actions::AFTER_CREATE_POST_URL, $post_url );
@@ -42,6 +46,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::BEFORE_CREATE_TERM_URL`**
   - **Description**: This action is fired before creating a term URL object.
+  - **Action String**: `static_snap_before_create_term_url`
   - **Example Usage**:
     ```php
     do_action( Actions::BEFORE_CREATE_TERM_URL, $term );
@@ -49,6 +54,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::AFTER_CREATE_TERM_URL`**
   - **Description**: This action is fired after creating a term URL object.
+  - **Action String**: `static_snap_after_create_term_url`
   - **Example Usage**:
     ```php
     do_action( Actions::AFTER_CREATE_TERM_URL, $term_url );
@@ -58,6 +64,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::BEFORE_FETCH_POST_URL`**
   - **Description**: Action that is triggered before fetching a post URL.
+  - **Action String**: `static_snap_before_fetch_post_url`
   - **Example Usage**:
     ```php
     do_action( Actions::BEFORE_FETCH_POST_URL, $post_id );
@@ -65,6 +72,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::AFTER_FETCH_POST_URL`**
   - **Description**: Action that is triggered after fetching a post URL.
+  - **Action String**: `static_snap_after_fetch_post_url`
   - **Example Usage**:
     ```php
     do_action( Actions::AFTER_FETCH_POST_URL, $post_url );
@@ -74,6 +82,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::DEPLOYMENT_PROCESS_INIT_EXTENSIONS`**
   - **Description**: Action used to initialize integrations in the deployment process.
+  - **Action String**: `static_snap_deployment_process_init_extensions`
   - **Example Usage**:
     ```php
     do_action( Actions::DEPLOYMENT_PROCESS_INIT_EXTENSIONS );
@@ -81,6 +90,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::DEPLOYMENT_BEFORE_PERFORM_TASK`**
   - **Description**: Action that is triggered before performing a task in the deployment process.
+  - **Action String**: `static_snap_deployment_before_perform_task`
   - **Example Usage**:
     ```php
     do_action( Actions::DEPLOYMENT_BEFORE_PERFORM_TASK, $task );
@@ -88,6 +98,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::DEPLOYMENT_AFTER_PERFORM_TASK`**
   - **Description**: Action that is triggered after performing a task in the deployment process.
+  - **Action String**: `static_snap_deployment_after_perform_task`
   - **Example Usage**:
     ```php
     do_action( Actions::DEPLOYMENT_AFTER_PERFORM_TASK, $task_result );
@@ -97,6 +108,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::REGISTER_ENVIRONMENT_EXTENSIONS`**
   - **Description**: Action used to define the environment types used in the plugin.
+  - **Action String**: `static_snap_register_environment_extensions`
   - **Example Usage**:
     ```php
     add_action( Actions::REGISTER_ENVIRONMENT_EXTENSIONS, array( $this, 'register_environment_types' ) );
@@ -104,6 +116,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::REGISTER_SEARCH_EXTENSIONS`**
   - **Description**: Action used to define the search types used in the plugin.
+  - **Action String**: `static_snap_register_search_extensions`
   - **Example Usage**:
     ```php
     add_action( Actions::REGISTER_SEARCH_EXTENSIONS, array( $this, 'register_search_types' ) );
@@ -111,6 +124,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::REGISTER_FORM_EXTENSIONS`**
   - **Description**: Action used to define the form types used in the plugin.
+  - **Action String**: `static_snap_register_form_extensions`
   - **Example Usage**:
     ```php
     add_action( Actions::REGISTER_FORM_EXTENSIONS, array( $this, 'register_form_types' ) );
@@ -120,6 +134,7 @@ Static Snap provides a set of actions that allow developers to customize and ext
 
 - **`Actions::REMOVE_HEAD_LINKS`**
   - **Description**: Action to remove head links.
+  - **Action String**: `static_snap_remove_head_links`
   - **Example Usage**:
     ```php
     add_action( Actions::REMOVE_HEAD_LINKS, array( $this, 'remove_head_links' ) );
