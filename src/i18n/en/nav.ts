@@ -27,6 +27,9 @@ export default [
 	{ text: 'Extensions', slug: 'concepts/extensions', key: 'concepts/extensions' },
 	{ text: 'Environments', slug: 'concepts/environments', key: 'concepts/environments' },
 
+	{ text: 'Tutorials', header: true, type: 'learn', key: 'tutorials' },
+	{ text: 'WordPress to Static', slug: 'tutorials/how-to-convert-wordpress-to-static', key: 'tutorials/how-to-convert-wordpress-to-static' },	
+
 	{ text: 'Developers', header: true, type: 'learn', key: 'developers' },
 	{ text: 'Contribute', slug: 'developers/contribute', key: 'developers/contribute' },
 	{

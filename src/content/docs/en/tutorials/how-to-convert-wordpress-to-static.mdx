@@ -1,0 +1,60 @@
+---
+title: How to Convert a WordPress Site to Static HTML Using Static Snap
+description: 'A step-by-step guide for converting a WordPress site to a static HTML site using the Static Snap plugin.'
+i18nReady: true
+---
+
+import { Image } from 'astro:assets';
+import { Steps } from '@astrojs/starlight/components';
+import image1 from '~/assets/screenshots/tutorials/wordpress-to-static/1.png';
+import image2 from '~/assets/screenshots/tutorials/wordpress-to-static/2.png';
+import image3 from '~/assets/screenshots/tutorials/wordpress-to-static/3.png';
+import image4 from '~/assets/screenshots/tutorials/wordpress-to-static/4.png';
+import image5 from '~/assets/screenshots/tutorials/wordpress-to-static/5.png';
+
+## Introduction
+
+Static Snap allows you to convert a WordPress website into a static HTML site. This is useful for improving load speed, reducing server management complexity, and enhancing website security. In this tutorial, you’ll learn how to install and configure the Static Snap plugin on your WordPress site to generate a static version of it.
+
+You can read more about what Static Snap is and its benefits [here](en/concepts/why-static-snap/)
+
+
+## Prerequisites
+
+Before you begin, make sure you have the following prerequisites:
+- **Install the Static Snap Plugin**: A complete guide on how to [install the Static Snap plugin on your WordPress site is available here](/en/install-and-setup/).
+- **Access to the WordPress Admin Panel**: Ensure you have administrative access to the WordPress site you want to convert to static.
+- **Basic WordPress Knowledge**: Familiarity with installing plugins and navigating the WordPress admin interface is helpful.
+- **Optional - Hosting or Deployment Platform**: Decide where you will host the static version of your site (e.g., GitHub Pages, Netlify, Vercel, or traditional web hosting).
+- **Optional - GitHub **: A GitHub account if you plan to use GitHub for automated backups or deployment.
+
+With these prerequisites met, you’re ready to proceed with the installation of Static Snap.
+
+
+
+## Basic Setup and Configuration
+
+After installing the plugin, Static Snap will create a default Production environment that can be customized in the **Static Snap > Environments** section.
+
+<Image src={image1} alt="Environments List" width={780} height={520} />
+
+
+### Environment Configuration
+
+Navigate to the **Environments** section and edit the default environment. Enable the **Generate ZIP File** option (if it’s not already enabled) to download a ZIP file containing your static site files.
+
+
+<Image src={image2} alt="Environment edit" width={780} height={520} />
+
+
+## Generating the Static Site
+
+Once you have configured Static Snap, you’re ready to generate the static version of your WordPress site. Follow these steps to create and download your static files:
+<Steps>
+1. In the WordPress top bar, click on the **Static Snap icon**. A dropdown will appear showing the available environments. Select the environment you want to generate and click on **Deploy to Production**. <Image src={image3} alt="Static Snap Deployment menu" width={780} height={520} />
+2. The generation process will begin, and you can monitor the progress with the displayed progress bar. This process may take a few minutes depending on your site size and server capabilities. <Image src={image4} alt="Static Snap Building..." width={780} height={520} />
+3. Once the generation process is complete, a dialog box will appear where you can download a ZIP file containing your site’s static files.  <Image src={image5} alt="Static Snap Congrats dialog" width={780} height={520} />
+4. Extract the downloaded ZIP file and review the generated static files. You can upload these files to your hosting server or a deployment platform such as Cloudflare Pages, GitHub Pages, Netlify, or Vercel.
+
+
+</Steps>
